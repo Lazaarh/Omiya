@@ -10,6 +10,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ResetPasswordController extends AbstractController
@@ -50,14 +51,16 @@ class ResetPasswordController extends AbstractController
             
                 $url = $this->generateUrl('update_password', [
                     'token' => $reset_password->getToken()
-                ]);
+                    ],
+                    UrlGeneratorInterface::ABSOLUTE_URL
+                );
 
-                $content = "Bonjour ".$user->getFirstname()."<br/> Vous avez demande a reinitialiser votre mot de passe.<br/><br/>";
-                $content .= "Merci de cliquer sur le lien suivant pour <a href=".$url.">changer votre mot de passe</a>.";
 
+                $content = "Bonjour ".$user->getFirstName()."<br/> Vous avez demande a reinitialiser votre mot de passe. <br/><br/>";
+                $content .= "Veuillez cliquer sur le <a href='".$url."'>lien suivant</a> pour modifier votre mot de passe.";
 
                 $mail = new Mail();
-                $mail->send($user->getEmail(), $user->getFirstname(), $user->getLastname(), 'Reinitialiser votre mot de passe', $content);
+                $mail->send($user->getEmail(), $user->getFirstname(), 'Reinitialisation de votre mot de passe', $content);
             }
         }
 
