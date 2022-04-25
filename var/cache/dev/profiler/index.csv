@@ -218,3 +218,25 @@ c34dca,127.0.0.1,GET,https://127.0.0.1:8000/,1650893057,,200
 =======
 >>>>>>> 4627e30e820ae817dcb9ffe99b3e53191786aaa9
 96fa86,127.0.0.1,GET,https://127.0.0.1:8000/,1650893883,,200
+74c2e2,127.0.0.1,GET,https://127.0.0.1:8000/,1650894204,,200
+476b2d,127.0.0.1,GET,https://127.0.0.1:8000/connexion,1650894207,,200
+c92649,127.0.0.1,POST,https://127.0.0.1:8000/connexion,1650894221,,302
+777107,127.0.0.1,GET,https://127.0.0.1:8000/compte,1650894222,,200
+01a098,127.0.0.1,GET,https://127.0.0.1:8000/,1650895293,,200
+cef1cd,127.0.0.1,GET,https://127.0.0.1:8000/compte,1650895295,,200
+ff1283,127.0.0.1,GET,https://127.0.0.1:8000/compte/mes-commandes,1650895296,,200
+bdfd0b,127.0.0.1,GET,https://127.0.0.1:8000/compte/mes-commandes/24042022-626512b3c2c58,1650895299,,200
+d12e51,127.0.0.1,GET,https://127.0.0.1:8000/compte/mes-commandes/24042022-626512b3c2c58,1650895306,,200
+3fbafc,127.0.0.1,GET,https://127.0.0.1:8000/admin,1650895311,7ae80f,403
+7ae80f,127.0.0.1,GET,https://127.0.0.1:8000/admin,1650895311,,403
+561f7d,127.0.0.1,GET,https://127.0.0.1:8000/deconnexion,1650895317,,302
+4669a3,127.0.0.1,GET,https://127.0.0.1:8000/,1650895317,,200
+e0913b,127.0.0.1,GET,https://127.0.0.1:8000/connexion,1650895319,,200
+d48c0e,127.0.0.1,POST,https://127.0.0.1:8000/connexion,1650895333,,302
+0c419e,127.0.0.1,GET,https://127.0.0.1:8000/compte,1650895333,,200
+9ff3c6,127.0.0.1,GET,https://127.0.0.1:8000/admin,1650895335,,200
+f38cfa,127.0.0.1,GET,https://127.0.0.1:8000/compte/mes-commandes,1650895339,,200
+9febdf,127.0.0.1,GET,https://127.0.0.1:8000/compte,1650895342,,200
+525c64,127.0.0.1,GET,https://127.0.0.1:8000/compte,1650895345,,200
+f3b58b,127.0.0.1,GET,https://127.0.0.1:8000/admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5CUserCrudController&menuIndex=1&submenuIndex=-1,1650895350,,200
+f4e10e,127.0.0.1,GET,https://127.0.0.1:8000/admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5COrderCrudController&menuIndex=2&submenuIndex=-1,1650895354,,200
