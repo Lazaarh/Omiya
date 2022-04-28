@@ -240,3 +240,11 @@ f38cfa,127.0.0.1,GET,https://127.0.0.1:8000/compte/mes-commandes,1650895339,,200
 525c64,127.0.0.1,GET,https://127.0.0.1:8000/compte,1650895345,,200
 f3b58b,127.0.0.1,GET,https://127.0.0.1:8000/admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5CUserCrudController&menuIndex=1&submenuIndex=-1,1650895350,,200
 f4e10e,127.0.0.1,GET,https://127.0.0.1:8000/admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5COrderCrudController&menuIndex=2&submenuIndex=-1,1650895354,,200
+a0ffc4,127.0.0.1,GET,https://127.0.0.1:8000/,1650901443,,200
+b60329,127.0.0.1,GET,https://127.0.0.1:8000/compte,1650901447,,200
+d7422e,127.0.0.1,GET,https://127.0.0.1:8000/admin,1650901448,,200
+4a54c1,127.0.0.1,GET,https://127.0.0.1:8000/admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5CProductCrudController&menuIndex=4&submenuIndex=-1,1650901451,,200
+3a8382,127.0.0.1,GET,https://127.0.0.1:8000/admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5COrderCrudController&menuIndex=2&submenuIndex=-1,1650901471,,200
+d0f4b8,127.0.0.1,GET,https://127.0.0.1:8000/,1651139428,,200
+f2bf0c,127.0.0.1,GET,https://127.0.0.1:8000/favicon.ico,1651139430,86ddec,404
+86ddec,127.0.0.1,GET,https://127.0.0.1:8000/favicon.ico,1651139430,,404
