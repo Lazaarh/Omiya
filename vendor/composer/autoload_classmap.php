@@ -41,6 +41,7 @@ return array(
     'App\\Form\\ChangePasswordType' => $baseDir . '/src/Form/ChangePasswordType.php',
     'App\\Form\\OrderType' => $baseDir . '/src/Form/OrderType.php',
     'App\\Form\\RegisterType' => $baseDir . '/src/Form/RegisterType.php',
+    'App\\Form\\ResetPasswordType' => $baseDir . '/src/Form/ResetPasswordType.php',
     'App\\Form\\SearchType' => $baseDir . '/src/Form/SearchType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'App\\Repository\\AddressRepository' => $baseDir . '/src/Repository/AddressRepository.php',

@@ -408,6 +408,14 @@
         <argument type="service" id=".service_locator.Vsl_MIv.App\Controller\Admin\DashboardController"/>
       </call>
     </service>
+    <service id="App\Controller\Admin\HeaderCrudController" class="App\Controller\Admin\HeaderCrudController" public="true" autowire="true" autoconfigure="true">
+      <tag name="ea.crud_controller"/>
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.wcyNGhy.App\Controller\Admin\HeaderCrudController"/>
+      </call>
+    </service>
     <service id="App\Controller\Admin\OrderCrudController" class="App\Controller\Admin\OrderCrudController" public="true" autowire="true" autoconfigure="true">
       <tag name="ea.crud_controller"/>
       <tag name="controller.service_arguments"/>
@@ -539,6 +547,10 @@
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\CategoryRepository" class="App\Repository\CategoryRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\HeaderRepository" class="App\Repository\HeaderRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -3997,6 +4009,14 @@
       <argument type="collection"/>
       <argument>C:\Users\Utilisateur\Desktop\Symfony\OmiyaProject\Omiya-Site-Ecommerce-main</argument>
       <call method="addPath">
+        <argument>C:\Users\Utilisateur\Desktop\Symfony\OmiyaProject\Omiya-Site-Ecommerce-main/templates/bundles/TwigBundle</argument>
+        <argument>Twig</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\Utilisateur\Desktop\Symfony\OmiyaProject\Omiya-Site-Ecommerce-main/templates/bundles/TwigBundle</argument>
+        <argument>!Twig</argument>
+      </call>
+      <call method="addPath">
         <argument>C:\Users\Utilisateur\Desktop\Symfony\OmiyaProject\Omiya-Site-Ecommerce-main\vendor\symfony\web-profiler-bundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
@@ -4769,7 +4789,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.Lw5VpQY"/>
+      <argument type="service" id=".service_locator.V6kH2_g"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -6213,6 +6233,10 @@
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\DashboardControllerInterface.0.App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\HeaderCrudController" class="App\Controller\Admin\HeaderCrudController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\HeaderCrudController" class="App\Controller\Admin\HeaderCrudController" autowire="true" abstract="true"/>
+    <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\HeaderCrudController" class="App\Controller\Admin\HeaderCrudController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Admin\HeaderCrudController" class="App\Controller\Admin\HeaderCrudController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\OrderCrudController" class="App\Controller\Admin\OrderCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\OrderCrudController" class="App\Controller\Admin\OrderCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\OrderCrudController" class="App\Controller\Admin\OrderCrudController" autowire="true" abstract="true"/>
@@ -6273,6 +6297,8 @@
     <service id=".abstract.instanceof.App\Repository\CarrierRepository" class="App\Repository\CarrierRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CategoryRepository" class="App\Repository\CategoryRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\CategoryRepository" class="App\Repository\CategoryRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\HeaderRepository" class="App\Repository\HeaderRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\HeaderRepository" class="App\Repository\HeaderRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\OrderDetailsRepository" class="App\Repository\OrderDetailsRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\OrderDetailsRepository" class="App\Repository\OrderDetailsRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\OrderRepository" class="App\Repository\OrderRepository" autowire="true" abstract="true"/>
@@ -6767,7 +6793,7 @@
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.oqlEKXY" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.jRbv0Za" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountAddressController::add" type="service_closure" id=".service_locator.4N2tuNN"/>
@@ -6815,6 +6841,27 @@
         <argument key="App\Controller\Admin\CategoryCrudController::renderFilters" type="service_closure" id=".service_locator.ZOQ9v2d"/>
         <argument key="App\Controller\Admin\CategoryCrudController::updateEntity" type="service_closure" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\Admin\DashboardController::configureUserMenu" type="service_closure" id=".service_locator.q6hA_O0"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::autocomplete" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::batchDelete" type="service_closure" id=".service_locator.Olybskb"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::configureActions" type="service_closure" id=".service_locator.CKlWSja"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::configureAssets" type="service_closure" id=".service_locator.U4Bbnsn"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::configureCrud" type="service_closure" id=".service_locator.4C0Bh8j"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::configureFilters" type="service_closure" id=".service_locator.Nt.ogDb"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::configureResponseParameters" type="service_closure" id=".service_locator.2dc0eaX"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::createEditForm" type="service_closure" id=".service_locator.bgO__Zr"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::createEditFormBuilder" type="service_closure" id=".service_locator.bgO__Zr"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::createIndexQueryBuilder" type="service_closure" id=".service_locator.3on9uHL"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::createNewForm" type="service_closure" id=".service_locator.bgO__Zr"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::createNewFormBuilder" type="service_closure" id=".service_locator.bgO__Zr"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::delete" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::deleteEntity" type="service_closure" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::detail" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::edit" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::index" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::new" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::persistEntity" type="service_closure" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::renderFilters" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController::updateEntity" type="service_closure" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\Admin\OrderCrudController::autocomplete" type="service_closure" id=".service_locator.ZOQ9v2d"/>
         <argument key="App\Controller\Admin\OrderCrudController::batchDelete" type="service_closure" id=".service_locator.Olybskb"/>
         <argument key="App\Controller\Admin\OrderCrudController::configureActions" type="service_closure" id=".service_locator.CKlWSja"/>
@@ -6943,6 +6990,27 @@
         <argument key="App\Controller\Admin\CategoryCrudController:renderFilters" type="service_closure" id=".service_locator.ZOQ9v2d"/>
         <argument key="App\Controller\Admin\CategoryCrudController:updateEntity" type="service_closure" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\Admin\DashboardController:configureUserMenu" type="service_closure" id=".service_locator.q6hA_O0"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:autocomplete" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:batchDelete" type="service_closure" id=".service_locator.Olybskb"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:configureActions" type="service_closure" id=".service_locator.CKlWSja"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:configureAssets" type="service_closure" id=".service_locator.U4Bbnsn"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:configureCrud" type="service_closure" id=".service_locator.4C0Bh8j"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:configureFilters" type="service_closure" id=".service_locator.Nt.ogDb"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:configureResponseParameters" type="service_closure" id=".service_locator.2dc0eaX"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:createEditForm" type="service_closure" id=".service_locator.bgO__Zr"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:createEditFormBuilder" type="service_closure" id=".service_locator.bgO__Zr"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:createIndexQueryBuilder" type="service_closure" id=".service_locator.3on9uHL"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:createNewForm" type="service_closure" id=".service_locator.bgO__Zr"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:createNewFormBuilder" type="service_closure" id=".service_locator.bgO__Zr"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:delete" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:deleteEntity" type="service_closure" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:detail" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:edit" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:index" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:new" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:persistEntity" type="service_closure" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:renderFilters" type="service_closure" id=".service_locator.ZOQ9v2d"/>
+        <argument key="App\Controller\Admin\HeaderCrudController:updateEntity" type="service_closure" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\Admin\OrderCrudController:autocomplete" type="service_closure" id=".service_locator.ZOQ9v2d"/>
         <argument key="App\Controller\Admin\OrderCrudController:batchDelete" type="service_closure" id=".service_locator.Olybskb"/>
         <argument key="App\Controller\Admin\OrderCrudController:configureActions" type="service_closure" id=".service_locator.CKlWSja"/>
@@ -7289,12 +7357,13 @@
         <argument key="doctrine.orm.listeners.doctrine_token_provider_schema_subscriber" type="service_closure" id="doctrine.orm.listeners.doctrine_token_provider_schema_subscriber"/>
       </argument>
     </service>
-    <service id=".service_locator.Lw5VpQY" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.V6kH2_g" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\AddressRepository" type="service_closure" id="App\Repository\AddressRepository"/>
         <argument key="App\Repository\CarrierRepository" type="service_closure" id="App\Repository\CarrierRepository"/>
         <argument key="App\Repository\CategoryRepository" type="service_closure" id="App\Repository\CategoryRepository"/>
+        <argument key="App\Repository\HeaderRepository" type="service_closure" id="App\Repository\HeaderRepository"/>
         <argument key="App\Repository\OrderDetailsRepository" type="service_closure" id="App\Repository\OrderDetailsRepository"/>
         <argument key="App\Repository\OrderRepository" type="service_closure" id="App\Repository\OrderRepository"/>
         <argument key="App\Repository\ProductRepository" type="service_closure" id="App\Repository\ProductRepository"/>
@@ -7355,6 +7424,7 @@
       <argument type="collection">
         <argument>App\Controller\Admin\CarrierCrudController</argument>
         <argument>App\Controller\Admin\CategoryCrudController</argument>
+        <argument>App\Controller\Admin\HeaderCrudController</argument>
         <argument>App\Controller\Admin\OrderCrudController</argument>
         <argument>App\Controller\Admin\ProductCrudController</argument>
         <argument>App\Controller\Admin\UserCrudController</argument>
@@ -7476,6 +7546,12 @@
       <argument>App\Controller\Admin\DashboardController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.Vsl_MIv" method="withContext"/>
+    </service>
+    <service id=".service_locator.wcyNGhy.App\Controller\Admin\HeaderCrudController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Admin\HeaderCrudController"/>
+      <argument>App\Controller\Admin\HeaderCrudController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.wcyNGhy" method="withContext"/>
     </service>
     <service id=".service_locator.wcyNGhy.App\Controller\Admin\OrderCrudController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Admin\OrderCrudController"/>
@@ -7737,12 +7813,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.oqlEKXY"/>
+      <argument type="service" id=".service_locator.jRbv0Za"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.oqlEKXY"/>
+      <argument type="service" id=".service_locator.jRbv0Za"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -8607,7 +8683,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.oqlEKXY"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.jRbv0Za"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -8629,7 +8705,7 @@
     <service id=".service_locator.rAlqQ78" alias=".service_locator.3on9uHL"/>
     <service id=".service_locator.tbo4Jjv" alias=".service_locator.bgO__Zr"/>
     <service id=".service_locator.J242Bef" alias=".service_locator.FN2.G6a"/>
-    <service id=".service_locator.ALkJFdf" alias=".service_locator.oqlEKXY"/>
+    <service id=".service_locator.yuz6co6" alias=".service_locator.jRbv0Za"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.puT8ZmX" alias=".service_locator.SIK3wuR"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>

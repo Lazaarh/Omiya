@@ -4,14 +4,16 @@
 
 {% block content %}
      <!-- Three columns of text below the carousel -->
-     <h2>Nos produits du moment !</h2>
-        <div class="row">
-            {% for product in products %}
-                <div class="col-md-3">
-                    {% include 'product/single_product.html.twig' %}
-                </div>
-            {% endfor %}
-        </div><!-- /.row -->
+     <div class="mt-5">
+        <h2>Nos produits du moment !</h2>
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-md-3">
+                        {% include 'product/single_product.html.twig' %}
+                    </div>
+                {% endfor %}
+            </div><!-- /.row -->
+    </div>
 
 
         <!-- START THE FEATURETTES -->

@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '2d6a48447f7ecb3194accc8e51c9dd345c264c3e',
+        'reference' => '58261179e8a18bf35ed893b8dfb0839d30b03fe9',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '2d6a48447f7ecb3194accc8e51c9dd345c264c3e',
+            'reference' => '58261179e8a18bf35ed893b8dfb0839d30b03fe9',
             'dev_requirement' => false,
         ),
         'cordoval/hamcrest-php' => array(
@@ -550,8 +550,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache-implementation' => array(
