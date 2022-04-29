@@ -34,8 +34,16 @@ body {
     height: 32rem;
 }
 
-.carousel-item > container {
-  
+/*.carousel-item > container {
+  filter: blur();
+  background-color: black !important;
+}*/
+
+.blur {
+    background-color: rgba(0, 0, 0, 0.466);
+    width: 50%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.466);
+
 }
 
 

@@ -84,7 +84,7 @@
         {% for header in headers %}
             <div class="carousel-item active" style="background: url('/uploads/{{ header.illustration}}'); background-size: cover; background-position: center;">
                 <div class="container">
-                    <div class="carousel-caption text-left">
+                    <div class="carousel-caption blur text-left">
                         <h1>{{ header.title }}</h1>
                         <p>{{ header.content }}</p>
                         <p><a class="btn btn-lg btn-primary" href={{header.btnUrl}} role="button">{{ header.btnTitle}}</a></p>
