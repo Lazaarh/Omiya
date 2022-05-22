@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous contacter{% endblock %}
+
+{% block content %}
+
+<h2>Nous contacter</h2>
+<br/>
+
+{% for message in app.flashes('notice') %}
+    <div class="alert alert-info">{{ message }}</div>
+{% endfor %}
+
+<div class="row">
+    <div class="col-md-8">{{ form(form) }}</div>
+    <div class="col-md-4">
+        <strong>Omiya</strong>
+        <hr>
+        03－6801－7575 
+        <br/>
+        大阪市葛飾区鎌倉4-18-2
+        <br/>
+        Osaka-shi Katsushika-Ku Kamakura 4-18-2
+        <br/>
+        omiya.japan@protonmail.com
+    </div>
+</div>
+
+{% endblock %}

@@ -6,6 +6,7 @@
     <meta name="description" content="Le Japon qui vient a vous">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
+    <link rel="icon" href="{{ asset( 'favicon.ico' )}}" />
     <title>{% block title %}Omiya - Taste of Japan{% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
@@ -36,7 +37,7 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="{{ path ('home')}}">Omiya</a>
+        <a class="navbar-brand" href="{{ path ('home')}}"><img src="{{ asset( 'uploads/logo-omiya.png' ) }}" alt="" width="42px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -52,7 +53,7 @@
                     <a class="nav-link" href="{{ path ('app_info')}}">Qui somme-nous ?</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="">Contact</a>
+                    <a class="nav-link" href="{{ path ('app_contact')}}">Contact</a>
                 </li>
             </ul>
 
@@ -121,7 +122,7 @@
     <footer class="footer-custom">
         <p class="float-right"><a href="#">Back to top</a></p>
         <p>&copy; Omiya &middot; Taste of Japan <br/>
-        <small><a href="#">Privacy</a> &middot; <a href="{{ path('cgu') }}">CGU</a></small></p>
+        <small><a href="{{ path('privacy') }}">Privacy</a> &middot; <a href="{{ path('cgu') }}">CGU</a></small></p>
     </footer>
 </main>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

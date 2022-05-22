@@ -6,11 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class InfoController extends AbstractController
+class PrivacyController extends AbstractController
 {
-    #[Route('/info', name: 'app_info')]
+    #[Route('/nos-privacy', name: 'privacy')]
     public function index(): Response
     {
-        return $this->render('info/index.html.twig');
+        return $this->render('privacy.html.twig');
     }
 }
