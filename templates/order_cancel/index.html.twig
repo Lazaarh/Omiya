@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Commande annulee - Erreur de paiement{% endblock %}
+{% block title %}Commande annulée - Erreur de paiement{% endblock %}
 
 {% block content %}
     <h2>Annulation de votre commande</h2>
     <p>
         Bonjour <strong>{{ order.user.firstname}} {{ order.user.lastname }}</strong>,<br/>
-        Suite a un probleme de paiement pour votre commande n<strong>{{ order.reference}}</strong>.<br/>
-        Une confirmation quant a l'erreur de paiement vient de vous etre envoye par mail a l'adresse suivante : <strong>{{ order.user.email}}</strong>
+        Suite à un probleme de paiement pour votre commande n<strong>{{ order.reference}}</strong>.<br/>
+        Une confirmation quant à l'erreur de paiement vient de vous etre envoyé par mail à l'adresse suivante : <strong>{{ order.user.email}}</strong>
         <hr>
 
-        <a href={{ path('order') }} class="btn btn-primary">Reesayer le paiement.</a>
+        <a href={{ path('order') }} class="btn btn-primary">Réesayer le paiement.</a>
         </p>
 {% endblock %}
 

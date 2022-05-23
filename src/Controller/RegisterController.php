@@ -44,14 +44,14 @@ class RegisterController extends AbstractController
                 $em->flush();
 
                 $mail = new Mail();
-                $content = "Bonjour ".$user->getFirstName()."<br/> Merci pour votre inscription sur notre site Omiya. <br/>N'hesitez pas a faire un tour dans notre boutique pour trouver les produits que vous aimez ! ";
+                $content = "Bonjour ".$user->getFirstName()."<br/> Merci pour votre inscription sur notre site Omiya. <br/>N'hésitez pas à faire un tour dans notre boutique pour trouver les produits que vous aimez ! ";
                 $mail->send($user->getEmail(), $user->getFirstname(), 'Bienvenue sur Omiya', $content);
 
-                $notification = "Inscription terminee";
+                $notification = "Inscription terminée";
 
             } else {
 
-                $notification = 'Un compte existe deja pour cette adresse email';
+                $notification = 'Un compte existe déjà pour cette adresse email';
             }
 
 

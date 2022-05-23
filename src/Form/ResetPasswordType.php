@@ -18,7 +18,7 @@ class ResetPasswordType extends AbstractType
         ->add('new_password', RepeatedType::class,
         [
             'type' => PasswordType::class,
-            'invalid_message' => 'Les mots de passe doivent etre identique.',
+            'invalid_message' => 'Les mots de passe doivent être identique.',
             'label' => 'Mon nouveau mot de passe',
             'required' => true,
             'first_options'=> ['label' => 'Mot nouveau mot de passe',
@@ -30,7 +30,7 @@ class ResetPasswordType extends AbstractType
 
         ->add('submit', SubmitType::class,
         [
-            'label' => "Mettre a jour", 
+            'label' => "Mettre à jour", 
             'attr' => [
                 'class' => 'btn-block btn-info'
             ]

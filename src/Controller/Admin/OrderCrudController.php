@@ -64,8 +64,8 @@ class OrderCrudController extends AbstractCrudController
 
 
         $mail = new Mail();
-        $content = "Bonjour". ' '.$order->getUser()->getFirstName(). "<br/> Votre commande" . ' '.$order->getReference(). ' ' ."est en cours de preparation. <br/>Vous pourrez retrouver les details de votre commande dans votre espace personnel. ";
-        $mail->send($order->getUser()->getEmail(), $order->getUser()->getFirstname(), 'Preparation de votre commande Omiya', $content);
+        $content = "Bonjour". ' '.$order->getUser()->getFirstName(). "<br/> Votre commande" . ' '.$order->getReference(). ' ' ."est en cours de préparation. <br/>Vous pourrez retrouver les détails de votre commande dans votre espace personnel. ";
+        $mail->send($order->getUser()->getEmail(), $order->getUser()->getFirstname(), 'Préparation de votre commande Omiya', $content);
 
         return $this->redirect($url);
 

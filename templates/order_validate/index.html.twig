@@ -7,9 +7,9 @@
     <p>
         Bonjour <strong>{{ order.user.firstname}} {{ order.user.lastname }}</strong>,<br/>
         Nous vous remercions pour votre commande n<strong>{{ order.reference}}</strong>.<br/>
-        Une confirmation vient de vous etre envoye par mail a l'adresse suivante : <strong>{{ order.user.email}}</strong>
+        Une confirmation vient de vous etre envoyé par mail à l'adresse suivante : <strong>{{ order.user.email}}</strong>
         <hr>
-        Votre commande sera livree par <strong>{{ order.carrierName }}</strong> a l'adresse suivante : <br/>
+        Votre commande sera livrée par <strong>{{ order.carrierName }}</strong> à l'adresse suivante : <br/>
         <strong>{{ order.delivery|raw }}</strong>
         <hr>
 

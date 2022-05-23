@@ -42,7 +42,7 @@ class ChangePasswordType extends AbstractType
             [
                 'type' => PasswordType::class,
                 'mapped' => false,
-                'invalid_message' => 'Les mots de passe doivent etre identique.',
+                'invalid_message' => 'Les mots de passe doivent être identique.',
                 'label' => 'Mon nouveau mot de passe',
                 'required' => true,
                 'first_options'=> ['label' => 'Mot nouveau mot de passe',
@@ -54,7 +54,7 @@ class ChangePasswordType extends AbstractType
 
             ->add('submit', SubmitType::class,
             [
-                'label' => "Mettre a jour"
+                'label' => "Mettre à jour"
             ])
 
     

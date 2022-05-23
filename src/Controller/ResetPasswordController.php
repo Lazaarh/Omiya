@@ -58,13 +58,13 @@ class ResetPasswordController extends AbstractController
                 );
 
 
-                $content = "Bonjour ".$user->getFirstName()."<br/> Vous avez demande a reinitialiser votre mot de passe. <br/><br/>";
+                $content = "Bonjour ".$user->getFirstName()."<br/> Vous avez demandé à reinitialiser votre mot de passe. <br/><br/>";
                 $content .= "Veuillez cliquer sur le <a href='".$url."'>lien suivant</a> pour modifier votre mot de passe.";
 
                 $mail = new Mail();
-                $mail->send($user->getEmail(), $user->getFirstname(), 'Reinitialisation de votre mot de passe', $content);
+                $mail->send($user->getEmail(), $user->getFirstname(), 'Réinitialisation de votre mot de passe', $content);
             
-                $this->addFlash('notice', 'Votre demande a ete prise en compte, vous allez recevoir un mail dans quelques instants.');
+                $this->addFlash('notice', 'Votre demande a été prise en compte, vous allez recevoir un mail dans quelques instants.');
 
 
             } else {

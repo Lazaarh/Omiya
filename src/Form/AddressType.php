@@ -21,7 +21,7 @@ class AddressType extends AbstractType
             ])
 
             ->add('firstname', TextType::class, [
-                'label'=>'Votre prenom'
+                'label'=>'Votre prénom'
             ])
 
             ->add('lastname', TextType::class, [
@@ -29,7 +29,7 @@ class AddressType extends AbstractType
             ])
 
             ->add('company', TextType::class, [
-                'label'=>'Votre societe', 
+                'label'=>'Votre société', 
                 'required' => false,
                 'attr' => ['placeholder'=>'(facultatif)']
             ])
@@ -51,7 +51,7 @@ class AddressType extends AbstractType
             ])
 
             ->add('phone', TelType::class, [
-                'label'=>'Votre numero de telephone'
+                'label'=>'Votre numéro de téléphone'
             ])
 
             ->add('submit', SubmitType::class, [

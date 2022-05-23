@@ -40,7 +40,7 @@ class OrderValidateController extends AbstractController
             $this->entityManager->flush();
 
             $mail = new Mail();
-            $content = "Bonjour". ' '.$order->getUser()->getFirstName()."<br/> Merci pour votre commande sur notre site Omiya. <br/>Vous pourrez retrouver les details de votre commande dans votre espace personnel. ";
+            $content = "Bonjour". ' '.$order->getUser()->getFirstName()."<br/> Merci pour votre commande sur notre site Omiya. <br/>Vous pourrez retrouver les détails de votre commande dans votre espace personnel. ";
             $mail->send($order->getUser()->getEmail(), $order->getUser()->getFirstname(), 'Votre commande Omiya', $content);
         }
         

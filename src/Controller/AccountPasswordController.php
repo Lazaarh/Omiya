@@ -39,7 +39,7 @@ class AccountPasswordController extends AbstractController
             $em = $this->doctrine->getManager();
             $em->persist($user);
             $em->flush();
-            $notification = "Votre mot de passe a bien ete mis a jour";
+            $notification = "Votre mot de passe a bien été mis à jour";
             } else{
                 $notification = "Votre mot de passe actuel n'est pas le bon";
             }

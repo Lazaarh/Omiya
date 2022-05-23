@@ -47,7 +47,7 @@
                     <a class="nav-link" href="{{ path ('products') }}">Nos produits</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="">Nos box</a>
+                    <a class="nav-link disabled" href="" style="opacity:0.5">Nos box <sup>Bientôt</sup></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ path ('app_info')}}">Qui somme-nous ?</a>
@@ -59,7 +59,7 @@
 
             <div class="navbar-item-custom">
             {% if app.user %}
-            <a href="{{ path('account') }}">Mon compte <small>{{ app.user.firstname }}</small></a> | <a href="{{ path('app_logout') }}">Deconnexion</a>
+            <a href="{{ path('account') }}">Mon compte <small>{{ app.user.firstname }}</small></a> | <a href="{{ path('app_logout') }}">Déconnexion</a>
             {% else %}
             <a href="{{ path('app_login') }}">Connexion</a> | <a href="{{ path('register') }}">Inscription</a>
             {% endif %}
@@ -120,7 +120,7 @@
 
     <!-- FOOTER -->
     <footer class="footer-custom">
-        <p class="float-right"><a href="#">Back to top</a></p>
+        <p class="float-right"><a href="#">Retour</a></p>
         <p>&copy; Omiya &middot; Taste of Japan <br/>
         <small><a href="{{ path('privacy') }}">Privacy</a> &middot; <a href="{{ path('cgu') }}">CGU</a></small></p>
     </footer>

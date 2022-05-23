@@ -17,7 +17,7 @@ class ContactType extends AbstractType
     {
         $builder
             ->add('prenom', TextType::class,[
-                'label' => 'Votre prenom',
+                'label' => 'Votre prénom',
             ])
             ->add('nom', TextType::class,[
                 'label' => 'Votre nom'
@@ -31,7 +31,8 @@ class ContactType extends AbstractType
             ->add('submit', SubmitType::class,[
                 'label' =>'Envoyer',
                 'attr' => [
-                    'class'=> 'btn btn-success'
+                    'class'=> 'btn btn-success disabled'
+
                 ]
             ])
         ;

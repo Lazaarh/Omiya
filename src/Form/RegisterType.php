@@ -21,7 +21,7 @@ class RegisterType extends AbstractType
             ->add('firstname', TextType::class, 
             [
                 'label' => 'Prenom',
-                'attr'=> ['placeholder'=> 'Merci de saisir votre prenom']
+                'attr'=> ['placeholder'=> 'Merci de saisir votre prénom']
              ])
 
             ->add('lastname', TextType::class,
@@ -39,7 +39,7 @@ class RegisterType extends AbstractType
             ->add('password', RepeatedType::class,
             [
                 'type' => PasswordType::class,
-                'invalid_message' => 'Les mots de passe doivent etre identique.',
+                'invalid_message' => 'Les mots de passe doivent être identique.',
                 'label' => 'Mot de passe',
                 'required' => true,
                 'first_options'=> ['label' => 'Mot de passe',

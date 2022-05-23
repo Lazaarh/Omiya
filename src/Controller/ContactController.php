@@ -18,7 +18,7 @@ class ContactController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid())
         {
-            $this->addFlash('notice', "Merci de nous avoir contacter, notre equipe vous repondra dans les meilleurs delais.");
+            $this->addFlash('notice', "Merci de nous avoir contacté, notre équipe vous répondra dans les meilleurs délais.");
 
         }
 
