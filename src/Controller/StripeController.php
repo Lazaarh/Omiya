@@ -20,7 +20,7 @@ class StripeController extends AbstractController
     public function index(EntityManagerInterface $entityManager, Cart $cart, $reference): Response
     {
         $product_for_stripe = [];
-        $YOUR_DOMAIN = 'http://www.omiya.ovh';
+        $YOUR_DOMAIN = 'https://www.omiya.ovh';
  
         $order = $entityManager->getRepository(Order::class)->findOneByReference($reference);
  
